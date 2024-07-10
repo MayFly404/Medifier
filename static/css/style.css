@@ -1,0 +1,87 @@
+/* MAKE SURE WE INCLUDE THE PAGE THAT EACH ELEMENT HAS */
+
+
+/* UNIVERSAL FOR ALL PAGES */
+
+
+/* BASE.HTML */
+
+
+/* LOGIN.HTML */
+.gradient-custom-2 {
+	/* fallback for old browsers */
+	background: #fccb90;
+	
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(to right, #fd5858, #ff4d4d, #ff4242, #ff2e2e);
+	
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #fd5858, #ff4d4d, #ff4242, #ff2e2e);
+}
+
+@media (min-width: 768px) {
+	.gradient-form {
+		height: 100vh !important;
+		}
+}
+@media (min-width: 769px) {
+	.gradient-custom-2 {
+		border-top-right-radius: .3rem;
+		border-bottom-right-radius: .3rem;
+	}
+}
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+  
+}
+inflation:hover {
+  transform: scale(1.05);
+  text-decoration:none;
+  color: white;
+}
+
+.days-one-regular {
+  font-family: "Days One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.text-primary {
+  color: red;
+}
+.nav-button {
+  color: White;
+  margin-left: 20px;
+  text-decoration:none;
+}
+.calendar {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.custom-btn {
+  border-radius: 8px; /* Adjust the value for the desired border radius */
+}
+
+.custom-btn button {
+  border: none; /* Remove button border */
+  background-color: transparent; /* Ensure button background is transparent */
+  color: white; /* Set text color to white */
+}

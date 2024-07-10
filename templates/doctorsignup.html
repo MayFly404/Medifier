@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+	<div class="container">
+		<div class="card col-sm-6">
+			<div class="card-body">
+				<h1 class="card-title text-center">Personal Info</h1>
+				<form action="/doctor_signup" method="POST">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" id="name" name="name" required>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="text" class="form-control" id="email" name="email" required>
+					</div>
+					<div class="form-group">
+						<label for="age">Age:</label>
+						<input type="text" class="form-control" id="age" name="age" required>
+					</div>
+					<div class="form-group">
+						<label for="description">Description:</label>
+						<textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+					</div>
+					<div class="form-group">
+						<label for="specialty">Specialty:</label>
+						<input type="text" class="form-control" id="specialty" name="specialty" required>
+					</div>
+					<div class="form-group">
+						<label for="degree">Education:</label>
+						<input type="text" class="form-control" id="degree" name="degree" required>
+					</div>
+					<button type="submit" class="btn btn-primary btn-block">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

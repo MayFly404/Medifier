@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="card" style="width: 18rem;">
+		<div class="card-body">
+			<form method="post">
+				<div class="form-outline mb-4">
+					<input type="text" name="username" id="form3Example1" class="form-control" />
+					<label class="form-label" for="form3Example1">Full Name</label>
+				</div>
+				<div class="form-outline mb-4">
+          <select class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="bachelors">Bachelors</option>
+            <option value="masters">Masters</option>
+            <option value="phd">PhD</option>
+          </select>
+          <label class="form-label" for="form3Example1">Select your current Degree</label>
+				</div>
+				<div class="form-outline mb-4">
+					<input type="text" name="specialty" id="form3Example5" class="form-control" />
+					<label class="form-label" for="form3Example5">Specialty</label>
+				</div>
+				<div class="form-outline mb-4">
+					<textarea name="description" id="form3Example6" class="form-control"></textarea>
+					<label class="form-label" for="form3Example6">Description</label>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}

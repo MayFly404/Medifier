@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if session['user_id'] %}
+
+<h1>Welcome, {{ username }}</h1>
+
+{% if appointments %}
+  <h2>Appointments:</h2>
+  <ul>
+    {% for appointment in appointments %}
+      <li>
+        Appointment Date and Time: {{ appointment[0] }}<br>
+        Notes: {{ appointment[1] }}<br>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No appointments found.</p>
+{% endif %}
+
+{% else %}
+  <h1>Please log in to access this page</h1>
+{% endif %}
+
+{% endblock %}

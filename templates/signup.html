@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Section: Design Block -->
+<section class="">
+	<!-- Jumbotron -->
+	<div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+		<div class="container">
+			<div class="row gx-lg-5 align-items-center">
+				<div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight, day-one-regular">
+						Medifier,
+						<span style="font-size: 50pt; color: #d63031;"><br>more than a website</span>
+					</h1>
+					<p style="color: hsl(217, 10%, 50.8%)">
+						We are a dedicated ecosystem fostering personalized interactions between patients and doctors, ensuring seamless communication and optimal healthcare outcomes. With our comprehensive services, including diagnosis, virtual consultations, and prescription management, we aim to provide a holistic approach to healthcare within a secure and user-friendly online environment. Join us in shaping the future of healthcare delivery, where accessibility, convenience, and quality of care are paramount.
+					</p>
+				</div>
+
+				<div class="col-lg-6 mb-5 mb-lg-0">
+					<div class="card">
+						<div class="card-body py-5 px-md-5">
+							<form method="post" action="/signup">
+								<!-- 2 column grid layout with text inputs for the first and last names -->
+								<div class="row">
+									<div class="col-md-6 mb-4">
+										<div class="form-outline">
+											<input type="text" name="username" id="form3Example1" class="form-control" />
+											<label class="form-label" for="form3Example1">First name</label>
+										</div>
+                  </div>
+									<div class="col-md-6 mb-4">
+										<div class="form-outline">
+											<input type="text" name="lastname" id="form3Example2" class="form-control" />
+											<label class="form-label" for="form3Example2">Last name</label>
+										</div>
+									</div>
+								</div>
+
+								<!-- Email input -->
+								<div class="form-outline mb-4">
+									<input type="email" name="email" id="form3Example3" class="form-control" />
+									<label class="form-label" for="form3Example3">Email address</label>
+								</div>
+
+								<!-- Password input -->
+								<div class="form-outline mb-4">
+									<input type="password" name="password" id="form3Example4" class="form-control" />
+									<label class="form-label" for="form3Example4">Password</label>
+								</div>
+
+								<!-- Submit button -->
+								<div class="d-grid gap-2 col-6 mx-auto">
+									<button style="border-color:white;" type="submit" class="btn btn-primary btn-block mb-2, gradient-custom-2">
+										Sign up
+									</button>
+								</div>
+
+								<!-- Doctor checkbox -->
+								<div class="form-check mb-4">
+									<input class="form-check-input" type="checkbox" value="" id="doctorCheck" name="doctorCheck">
+									<label class="form-check-label" for="doctorCheck">
+										Are you a doctor?
+									</label>
+								</div>
+
+								<!-- Login link -->
+								<div class="text-center">
+									<p>Already have an account? <a href="#">Login</a></p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+
+
+{% endblock %}

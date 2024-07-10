@@ -1,0 +1,55 @@
+<!-- combined_template.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<div class="container">
+    <h2>Symptoms Response</h2>
+    <p>{{ symptoms_response }}</p>
+
+    <br><br><br>
+
+    <div class="card" style="width: 38rem;">
+        <div class="card-body">
+            
+				<h5 class="card-title">{{ doctor_type }}</h5>
+				<p class="card-text">{{ doctor_note }}</p>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="submit">Book Appointment</button>
+                </div>
+        </div>
+    </div>
+
+    <br><br>
+
+	<h2>Doctors with Specialty: {{ doctor_type }}</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Age</th>
+				<th>Degree</th>
+				<th>Set Appointment Time</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for doctor in doctors %}
+			<tr>
+				<td>{{ doctor[1] }}</td> <!-- Email -->
+				<td>{{ doctor[2] }}</td> <!-- Age -->
+				<td>{{ doctor[3] }}</td> <!-- Degree -->
+				<td>
+					<form method="post" action="/set_appointment">
+						<input type="hidden" name="doctor_id" value="{{ doctor[1] }}">
+						<input type="hidden" name="doctor_note" value="{{ doctor[4] }}">
+						<input type="datetime-local" name="appointment_time" required>
+						<button type="submit" class="btn btn-primary">Set Appointment</button>
+					</form>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div>
+{% endblock %}

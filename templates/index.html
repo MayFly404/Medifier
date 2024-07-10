@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <header class="masthead bg-white text-center">
+      <div class="container d-flex align-items-center flex-column">
+          <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='img/MedifierLogo2.png') }}" alt="..." style="width:400px;" />
+          <h1 class="masthead-heading text-uppercase mb-0 text-danger">Medifier</h1>
+          <div class="divider-custom divider-light">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+              <div class="divider-custom-line"></div>
+          </div>
+          <p class="masthead-subheading font-weight-light mb-0 text-danger">The Newest Health Technology Yet.</p>
+      </div>
+    <div style="display: flex; justify-content: space-around;">
+       <div class="card" style="display: flex; justify-content: center; align-items: center; width: 25rem;">
+         <img src="{{ url_for('static', filename='img/IMG_8388.JPG') }}" class="card-img-left" alt="Oh NO!" width="150" height="250">
+  
+            <div class="card-body">
+              <h5 class="card-title">Avi Sahani</h5>
+              <p class="card-text">As a front end developer I take pride in making what all of our employees and patients see on a daily basis and I take great pride in contributing to all the lives Medifier has saved.
+      </p>
+        </div>
+      </div>
+       <div class="card" style="display: flex; justify-content: center; align-items: center; width: 25rem;">
+         <img src="{{ url_for('static', filename='img/IMG_0631.JPG') }}" class="card-img-left" alt="Oh NO!" width="150" height="250">
+  
+            <div class="card-body">
+              <h5 class="card-title">Siva Dasaka</h5>
+              <p class="card-text">As someone who played a significant role in the backend development of the system, I firmly believe that implementing Medifier represents a pivotal step towards optimizing resource utilization in the medical domain. Leveraging AI technologies will undoubtedly revolutionize healthcare operations, streamlining processes, and enhancing overall efficiency. As a backend developer, I'm convinced that integrating AI-driven solutions like Medifier holds immense potential in reshaping the future of healthcare. </p>
+        </div>
+      </div>
+       <div class="card" style="display: flex; justify-content: center; align-items: center; width: 25rem;">
+         <img src="{{ url_for('static', filename='img/IMG_2296.JPG') }}" class="card-img-left" alt="Oh NO!" width="185" height="250">
+  
+            <div class="card-body">
+              <h5 class="card-title">Andriy Misyura</h5>
+              <p class="card-text">Being one of the front-end developers, working on creating the logo from scratch and working with CSS and Bootstrap, I believe my contributions to Medifier helped people who are suffering and neglected. I take great pride in making the face of our company that millions will remember. </p>
+        </div>
+      </div>
+      <div class="card" style="display: flex; justify-content: center; align-items: center; width: 25rem;">
+         <img src="{{ url_for('static', filename='img/IMG_1893.JPG') }}" class="card-img-left" alt="Oh NO!" width="180" height="250">
+  
+            <div class="card-body">
+              <h5 class="card-title">Wissam Usair</h5>
+              <p class="card-text">As a backend developer immersed in database management, I endorse solutions like Medifier to optimize resource usage in healthcare. Integrating AI enhances database operations, streamlining data handling and analysis. With Medifier, we can intelligently manage medical data, fostering better decision-making and patient care. This AI integration promises to propel healthcare towards a more efficient, data-driven future. </p>
+        </div>
+      </div>
+      <div class="card" style="display: flex; justify-content: center; align-items: center; width: 25rem;">
+         <img src="{{ url_for('static', filename='img/IMG_1816.JPG') }}" class="card-img-left" alt="Oh NO!" width="180" height="250">
+  
+            <div class="card-body">
+              <h5 class="card-title">Harman Singh</h5>
+              <p class="card-text">As someone who played a big role in the front end aspect of the dashboard, I believe that Medifier is the best way to efficiently decrease human resources being wasted daily in the medical field. Having AI assist us will play a massive role in healthcare in the future. </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+</body>
+</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- <div class="jumbotron">
+  <h1 class="title">Title</h1>
+</div>
+
+<div id="introduction" class="introduction">
+  <h2>Welcome to our website</h2>
+  <p>This is the introduction of our website.</p>
+</div> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+	const title = document.querySelector('.title');
+	const introductionSection = document.getElementById('introduction');
+
+	window.addEventListener('scroll', function() {
+	  if (isInViewport(introductionSection)) {
+		title.classList.add('scroll');
+		document.body.classList.add('scrolled');
+	  } else {
+		title.classList.remove('scroll');
+		document.body.classList.remove('scrolled');
+	  }
+	});
+
+	function isInViewport(element) {
+	  const rect = element.getBoundingClientRect();
+	  return (
+		rect.top >= 0 &&
+		rect.left >= 0 &&
+		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+	  );
+	}
+  });
+</script>
+
+{% endblock %}
